@@ -12,7 +12,7 @@ function Cart() {
     const navigate = useNavigate();
     return (
         <div className="cart">
-            <div>
+            <div className="title">
                 Your Cart Item
             </div>
             <div className="cart">
