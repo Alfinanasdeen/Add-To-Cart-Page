@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { context } from "../../context/context.jsx";
 
 export const CartDisplay = (props) => {
-    const { cartItem, addToCart, removeToCart, manualUpdateCount } = useContext(context);
+    const { cartItem, addToCart, removeToCart, manualUpdateCount, removeFromCart, } = useContext(context);
     const { id, productName, price, productImage } = props.data;
 
     return (
@@ -16,6 +16,12 @@ export const CartDisplay = (props) => {
                     <input value={cartItem[id]} onChange={(e) => manualUpdateCount(Number(e.target.value), id)} />
                     <button onClick={() => addToCart(id)}>+</button>
                 </div>
+                <button
+                    className="removeButton"
+                    onClick={() => removeFromCart(id)}
+                >
+                    Remove
+                </button>
             </div>
         </div>
     );

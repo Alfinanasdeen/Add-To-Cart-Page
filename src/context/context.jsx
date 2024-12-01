@@ -47,12 +47,18 @@ const removeToCart = (itemid) =>{
 const manualUpdateCount = (newQuantity, itemid) =>{
     setCartItem((prev)=>({...prev, [itemid]:newQuantity}))
 }
+
+const removeFromCart = (itemid) => {
+    setCartItem((prev) => ({ ...prev, [itemid]: 0 }));
+};
+
 /* console.log(cartItem) */
 const contextValue = {
     cartItem,
     addToCart,
     removeToCart,
     manualUpdateCount,
+    removeFromCart,
     getTotalCartAmount,
     getTotalCartCount,
 }

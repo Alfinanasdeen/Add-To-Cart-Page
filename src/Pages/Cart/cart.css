@@ -46,3 +46,17 @@
     font-size: 20px;
     text-align: center;
   }
+
+  .removeButton {
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.removeButton:hover {
+    background-color: #ff7875;
+}
